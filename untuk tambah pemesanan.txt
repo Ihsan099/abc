@@ -1,0 +1,54 @@
+<div id="pesan" class="row mb-3">
+            <div class="col">
+                <?php
+        include "koneksi.php";
+
+        if (isset($_POST['simpan_button'])) {
+
+            $nama_pelanggan = $_POST['nama_pelanggan'];
+            $no_telp        = $_POST['no_telp'];
+            $email          = $_POST['email'];
+            $tgl_pemesanan  = $_POST['tgl_pemesanan'];
+            $jumlah_jam     = $_POST['jumlah_jam'];
+            $waktu_mulai    = $_POST['waktu_mulai'];
+
+            $chekSQL = "SELECT * FROM penggajian WHERE karyawan_nik = '$karyawan_nik' AND bulan='$bulan_select' AND tahun='$tahun'";
+            $result = mysqli_query($connection, $chekSQL);
+            if (mysqli_num_rows($result) > 0) {
+        ?>
+                <div class="alert alert-daanger" role="alert">
+                    <i class="fa fa-exclamation-circle"></i>
+                    Data gaji <?= $bulan_select ?> tahun <?= $tahun ?> Sudah ada
+                </div>
+                <?php
+            } else {
+                $sql = "INSERT INTO penggajian SET karyawan_nik='$karyawan_nik', bulan='$bulan_select',tahun='$tahun', gaji_bayar='$gaji_pokok'";
+                $result = mysqli_query($connection, $sql);
+                if (!$result) {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    <i class="fa fa-exclamation-circle"></i>
+                    <?php echo mysqli_error($connection) ?>
+                </div>
+                <?php
+                } else {
+                ?>
+                <div class="alert alert-success" role="alert">
+                    <i class="fa fa-check-circle"></i>
+                    Data berhasil disimpan
+                </div>
+                <?php
+                }
+            }
+        }
+
+        $nik = $_GET['nik'];
+        $selectSQL = "SELECT * FROM karyawan WHERE nik = $nik";
+        $result = mysqli_query($connection, $selectSQL);
+        if (!$result || mysqli_num_rows($result) == 0) {
+            echo '<meta http-equiv="refresh" content="0;url=?page=pilihkaryawanpenggajian">';
+        }
+        $row = mysqli_fetch_assoc($result);
+        ?>
+            </div>
+        </div>

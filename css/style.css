@@ -1,0 +1,360 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #f1c40f;
+}
+
+/* Banner */
+.banner {
+  background-color: #f1c40f;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  position: relative;
+}
+
+.banner-image {
+  background-image: url("https://cdn.pixabay.com/photo/2016/02/19/11/23/music-studio-1209701_960_720.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.banner-text {
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.banner-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.banner-text p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.banner-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-button:hover {
+  background-color: #f1c40f;
+  color: #333;
+}
+
+/* Services */
+.services {
+  background-color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.services-header h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.services-header p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-item {
+  flex: 1;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f1c40f;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Booking */
+.booking {
+  background-color: #333;
+  max-width: 1500px;
+  margin: 20px auto;
+  color: #fff;
+  padding: 40px 40px;
+}
+
+.booking-header h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.booking-header p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.booking-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.booking-button {
+  background-color: #f1c40f;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.booking-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#contact {
+  margin-top: 130px;
+  background: #f1c40f;
+  padding: 50px 0px 50px 0px;
+}
+.wrapper {
+  width: 1250px;
+  margin: auto;
+  position: relative;
+}
+.footer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.footer-selection {
+  width: 20%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.footer-selection h3 {
+  text-align: center;
+}
+
+.footer-selection a img:hover {
+  width: 40px;
+}
+
+/* Footer */
+footer {
+  /* background-color: #f1c40f; */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .banner-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .banner-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .service-item {
+    flex: 1 1 100%;
+  }
+}
+
+/* Animation */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.grow {
+  animation: grow 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
